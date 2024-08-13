@@ -1,0 +1,13 @@
+.device-status {
+    margin-top: 20px;
+  }
+  
+  .tunnel {
+    margin-bottom: 20px;
+  }
+  
+  .status-cards {
+    display: flex;
+    gap: 20px;
+  }
+  

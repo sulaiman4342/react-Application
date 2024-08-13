@@ -1,0 +1,9 @@
+.dashboard-container {
+  display: flex;
+  background-color: #ffffff;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}

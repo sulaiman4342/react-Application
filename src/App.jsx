@@ -1,7 +1,8 @@
 import React from 'react';
-import Login from './Components/Login';  
-import Footer from './Components/Footer';
-import DashboardPage from './pages/DashboardPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
+import Login from './Pages/Login';
+import Dashboard from './Pages/Dashboard';
+
 import './index.css';
 
 function App() {
@@ -10,11 +11,11 @@ function App() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Login />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
-        <Footer /> {/* Add Footer at the bottom */}
+        
       </div>
-  </Router>
+    </Router>
   );
 }
 

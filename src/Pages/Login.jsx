@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import Footer from '../Components/Footer';
 
 function Login() {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const   
+ [errorMessage, setErrorMessage] = useState('');
 
   const handleLogin = () => {
-    // You can add authentication logic here
-    if (username && password) {
-      navigate('/dashboard');
+    if (username === 'admin' && password==='admin123') {
+      navigate('/dashboard');// Navigate to dashboard on successful login
+      setErrorMessage(''); // Clear error message
+    } else {
+      setErrorMessage('Incorrect username or password'); //Set error message
     }
   };
 
@@ -21,6 +26,7 @@ function Login() {
       </div>
       <div className="login-form">
         <h2>Please login to your account</h2>
+        {errorMessage && <p className="error-message">{errorMessage}</p>} {/* Display error message if present */}
         <input 
           type="text" 
           placeholder="Username" 
@@ -42,7 +48,9 @@ function Login() {
           <button className="signup-button">CREATE NEW</button>
         </div>
       </div>
+      <Footer />
     </div>
+    
   );
 }
 
