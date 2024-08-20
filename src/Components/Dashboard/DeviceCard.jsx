@@ -12,4 +12,3 @@ const DeviceCard = ({title, value, icon, unit}) => {
 };
 
 export default DeviceCard;
-

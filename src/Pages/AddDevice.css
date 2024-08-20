@@ -1,0 +1,23 @@
+ .addDevice-container {
+    height: 100vh;
+    display: flex;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+  .checkbox-group {
+    background-color: rgb(211, 206, 200);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+  }
+  
+  .checkbox-group label {
+    flex: 0 0 48%; 
+    margin-bottom: 10px; 
+  }
+  
+   

@@ -1,0 +1,64 @@
+.manual-operation-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: auto;
+}
+
+.manual-operation-form h2 {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 150;
+  height:
+}
+
+.form-group label {
+  flex: 1;
+  font-size: 16px;
+}
+
+.form-group .slider {
+  flex: 3;
+  margin: 0 10px;
+}
+
+.form-group span {
+  flex: 1;
+  text-align: right;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-group button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-group button:first-child {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.button-group button:last-child {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.slider{
+  width: 20px;
+  height: 4px;
+}

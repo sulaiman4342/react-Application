@@ -4,9 +4,20 @@ import './Sidebar.css';
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="menu-item active">Dashboard</div>
-      <div className="menu-item">Add Device</div>
-      <div className="menu-item">Report</div>
+      <div className="sidebar-header">
+        <div className="menu-icon"></div>
+        <span>Dashboard</span>
+      </div>
+      <ul className="sidebar-menu">
+        <li className="menu-item">
+          <span className="menu-icon-diamond"></span>
+          <span>Add Device</span>
+        </li>
+        <li className="menu-item">
+          <span className="menu-icon-diamond"></span>
+          <span>Report</span>
+        </li>
+      </ul>
     </div>
   );
 };

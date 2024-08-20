@@ -1,15 +1,42 @@
 .sidebar {
-    width: 200px;
-    background-color: #f8f9fa;
-  }
-  
-  .menu-item {
-    padding: 15px;
-    cursor: pointer;
-  }
-  
-  .menu-item.active {
-    background-color: #28a745;
-    color: white;
-  }
-  
+  width: 250px;
+  background-color: #f7fbf9;
+  padding: 20px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #2e7d32;
+  margin-right: 10px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #dcedc8;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.menu-icon-diamond {
+  width: 8px;
+  height: 8px;
+  background-color: #388e3c;
+  margin-right: 10px;
+}

@@ -1,10 +1,10 @@
 .footer {
-    background-color: #333; /* Gray background */
-    color: white; /* White text */
+    background-color: #333; 
+    color: white; 
     text-align: center;
-    padding: 1px 0; /* Padding for spacing */
+    padding: 1px 0;
     width: 100%;
-    position: fixed; /* Fixed at the bottom */
+    position: fixed; 
     bottom: 0;
     left: 0;
   }
