@@ -10,7 +10,9 @@ const ManualOperationForm = () => {
   const [co2Level, setCo2Level] = useState('');
   const [lux, setLux] = useState('');
   const [electricalConductivity, setElectricalConductivity] = useState('');
-  const [npkLevel, setNpkLevel] = useState('N');
+  const [npkLevel_N, setNpkLevel_N] = useState('');
+  const [npkLevel_P, setNpkLevel_P] = useState('');
+  const [npkLevel_K, setNpkLevel_K] = useState('');
   const [o2Level, setO2Level] = useState(16);
 
   const navigate = useNavigate();
@@ -23,7 +25,9 @@ const ManualOperationForm = () => {
       co2Level,
       lux,
       electricalConductivity,
-      npkLevel,
+      npkLevel_N,
+      npkLevel_P,
+      npkLevel_K,
       o2Level,
     });
   };
@@ -37,7 +41,7 @@ const ManualOperationForm = () => {
       <h2>Manual Operation</h2>
 
       <div className="form-group">
-        <label>Temperature</label>
+        <label>Temperature</label>        
         <Slider
           className="slider"
           value={temperature}
@@ -48,7 +52,7 @@ const ManualOperationForm = () => {
         <span>{temperature}%</span>
       </div>
 
-      {/* <div className="form-group">
+      <div className="form-group">
         <label>Humidity</label>
         <Slider
           className="slider"
@@ -58,9 +62,9 @@ const ManualOperationForm = () => {
           onChange={(value) => setHumidity(value)}
         />
         <span>{humidity}%</span>
-      </div> */}
+      </div>
 
-      {/* <div className="form-group">
+      <div className="form-group">
         <label>Soil Moisture</label>
         <Slider
           className="slider"
@@ -70,28 +74,114 @@ const ManualOperationForm = () => {
           onChange={(value) => setSoilMoisture(value)}
         />
         <span>{soilMoisture}%</span>
-      </div> */}
+      </div>
 
-      {/* <div className="form-group">
-        <label>CO2 Level</label>
+      <div className="form-group">
+        <label>CO<sub>2</sub> Level</label>
         <input
           type="text"
           value={co2Level}
           onChange={(e) => setCo2Level(e.target.value)}
         />
-      </div> */}
+      </div>
 
-      {/* <div className="form-group">
+      <div className="form-group">
+        <label>LUX</label>
+        <input
+          type="text"
+          value={lux}
+          onChange={(e) => setLux(e.target.value)}
+        />
+      </div>
+
+      <div className="form-group">
+        <label>Electrical Conductivity</label>
+        <input
+          type="text"
+          value={electricalConductivity}
+          onChange={(e) => setElectricalConductivity(e.target.value)}
+        />
+      </div>
+      
+      <div className="form-group">
         <label>NPK Level</label>
-        <select value={npkLevel} onChange={(e) => setNpkLevel(e.target.value)}>
-          <option value="N">N</option>
-          <option value="P">P</option>
-          <option value="K">K</option>
-        </select>
+      </div>
+      {/* <div className="form-group ">
+        <label>NPK Level</label>        
+        <div className="npk-sliders">
+          <div className="npk-slider-container">
+            <label className="npk-label">N</label>
+            <Slider
+              className="slider"
+              value={npkLevel_N}
+              min={0}
+              max={100}
+              onChange={(value) => setNpkLevel_N(value)}
+            />
+            <span>{npkLevel_N}%</span>
+          </div>
+          <div className="npk-slider-container">
+            <label className="npk-label">P</label>
+            <Slider
+              className="slider"
+              value={npkLevel_P}
+              min={0}
+              max={100}
+              onChange={(value) => setNpkLevel_P(value)}
+            />
+            <span>{npkLevel_P}%</span>
+          </div>
+          <div className="npk-slider-container">
+            <label className="npk-label">K</label>
+            <Slider
+              className="slider"
+              value={npkLevel_K}
+              min={0}
+              max={100}
+              onChange={(value) => setNpkLevel_K(value)}
+            />
+            <span>{npkLevel_K}%</span>
+          </div>
+        </div>
       </div> */}
+      <div className="form-group">
+        <label>N</label>
+        <Slider
+          className="slider"
+          value={npkLevel_N}
+          min={0}
+          max={100}
+          onChange={(value) => setNpkLevel_N(value)}
+        />
+        <span>{npkLevel_N}%</span>
+      </div>
 
-      {/* <div className="form-group">
-        <label>O2 Level</label>
+      <div className="form-group">
+        <label>P</label>
+        <Slider
+          className="slider"
+          value={npkLevel_P}
+          min={0}
+          max={100}
+          onChange={(value) => setNpkLevel_P(value)}
+        />
+        <span>{npkLevel_P}%</span>
+      </div>
+
+      <div className="form-group">
+        <label>K</label>
+        <Slider
+          className="slider"
+          value={npkLevel_K}
+          min={0}
+          max={100}
+          onChange={(value) => setNpkLevel_K(value)}
+        />
+        <span>{npkLevel_K}%</span>
+      </div>
+      
+      <div className="form-group">
+        <label>O<sub>2</sub> Level</label>
         <Slider
           className="slider"
           value={o2Level}
@@ -100,7 +190,7 @@ const ManualOperationForm = () => {
           onChange={(value) => setO2Level(value)}
         />
         <span>{o2Level}%</span>
-      </div> */}
+      </div>
 
       <div className="button-group">
         <button onClick={handleSave}>Save</button>
