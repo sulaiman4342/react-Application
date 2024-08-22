@@ -1,10 +1,10 @@
 .manual-operation-form {
   background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   max-width: 500px;
-  margin: auto;
+  margin: 20px 40px 40px 200px;
 }
 
 .manual-operation-form h2 {
@@ -14,30 +14,81 @@
 
 .form-group {
   display: flex;
+  flex-direction: row;
   align-items: center;
-  margin-bottom: 20px;
-  width: 150;
-  height:
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .form-group label {
-  flex: 1;
-  font-size: 16px;
+  flex: 0 0 200px; /* Set a fixed width for labels */
+  text-align: left; /* Align text to the left */
+  margin-right: 20px; /* Add some space between label and slider */
 }
 
-.form-group .slider {
-  flex: 3;
-  margin: 0 10px;
+.slider {
+  flex: 1;
+  position: relative;
+  margin-right: 10px;
+  height: 3px; 
+  background-color: #ffffff;  
+  border-radius: 3px; 
+  margin-bottom: 5px;
 }
 
-.form-group span {
-  flex: 1;
+.slider .track {
+  position: absolute;
+  height: 100%;
+  background-color: #000000; /* Color for the filled part of the track */
+}
+
+.slider .thumb {
+  position: absolute;
+  width: 6px; /* Width of the thumb */
+  height: 10px; /* Height of the thumb */
+  background-color: #1b1c1d; /* Color of the thumb */
+  z-index: 1;
+  cursor: default;
+  border: 2px solid #ffffff; /* Optional: add a border to the thumb */
+}
+
+span {
+  flex: 0 0 60px;
+  font-size: 16px; 
   text-align: right;
+}
+
+.npk-group {
+  /* display: flex;
+  flex-direction: row; */
+  /* align-items: center; */
+  /* justify-content: space-between; Distribute NPK elements evenly */
+  width: 100%;
+}
+
+.npk-sliders {
+  display: flex;
+  flex-direction: column;
+}
+
+.npk-slider-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.npk-label {
+  width: 3px;
+  font-weight: bold;
+  text-align: center;
+  margin-right: 0px;
 }
 
 .button-group {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .button-group button {
@@ -56,9 +107,4 @@
 .button-group button:last-child {
   background-color: #dc3545;
   color: #fff;
-}
-
-.slider{
-  width: 20px;
-  height: 4px;
 }
